@@ -1,0 +1,23 @@
+<h1>Directivas Deportes component</h1>
+<h2>Número de deportes: {{sports.length}}</h2>
+@if (sports.length <4) {
+    <h2>
+        Tenemo menos de 4 deportes....
+    </h2>
+}@else{
+    <h2>
+        Tenemos más de 4 deportes
+    </h2>
+}
+<ul>
+    @for (deporte of sports; track deporte; let i =$index) {
+        <li>
+            {{i}} - {{deporte}}
+        </li>
+    }
+</ul>
+
+
+@for (n of numbers; track n) {
+    <p [style.color]="n % 2 ==0 ? 'green': 'red'">{{n}} </p>
+}
