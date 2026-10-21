@@ -1,0 +1,22 @@
+<h1>Tabla de Multiplicar</h1>
+
+<form #sumarform="ngForm" (ngSubmit)="calcularTabla()">
+    <label>Número que desea su tabla:</label><br/>
+    <input type="number" #numeromultiplicar><br/>
+    <button>Crea tu tabla!!!</button>
+</form>
+
+<ul>
+    <li *ngFor="let item of tabla1">{{item}}</li>
+</ul>
+
+<form #formuser="ngForm" (ngSubmit)="crearTabla2()">
+    <label for="">Número que desea su tabla:</label>
+    <input type="text" [(ngModel)]="numeroElegido" #cajaNumero="ngModel" name="cajanumero"><br/>
+    <button>Enviar datos</button>
+</form>
+<ul>
+    @for (resultado of tabla2; track resultado; let i = $index) {
+        <li>{{ numeroElegido }} x {{ i + 1 }} = {{ resultado }}</li>
+    }
+</ul>
