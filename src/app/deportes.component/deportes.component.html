@@ -19,5 +19,21 @@
 
 
 @for (n of numbers; track n) {
+    <li [ngClass]="{
+        par: n % 2 ==0 ,
+        impar: n % 2 ==1
+    }"
+    >{{n}}</li>
+}
+
+<hr>
+@for (n of numbers; track n) {
+    <li
+        [class.par] ="n % 2 ==0"
+        [class.impar] ="n % 2 == 1" 
+    >{{n}}</li>
+}
+
+@for (n of numbers; track n) {
     <p [style.color]="n % 2 ==0 ? 'green': 'red'">{{n}} </p>
 }
