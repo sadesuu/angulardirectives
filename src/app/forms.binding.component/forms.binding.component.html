@@ -1,6 +1,6 @@
 <h1>Forms binding</h1>
 <h3>{{msg}}</h3>
-<form #formuse="ngForm" (ngSubmit)="recibirDatos()" action="">
+<form #formuser="ngForm" (ngSubmit)="recibirDatos()">
     <label for="">Nombre:</label>
     <input type="text" [(ngModel)]="user.nombre" #cajanombre="ngModel" name="cajanombre"><br/>
 
